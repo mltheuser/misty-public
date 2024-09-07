@@ -18,7 +18,15 @@ Meet Misty your AI companion for everything TTRPG.
 
 ## Model Cards
 
-[Model Cards]
-
 ### Misty-Slim
+
+Fine-tune of LLama 3.1. 
+
+On 8 Million Tokens of high quality chat data.
+
+Size: 8b
+
+Model Performance:
+
+[Figure]
 
