@@ -1,32 +1,45 @@
 ![](https://github.com/user-attachments/assets/2b53da99-6c04-4991-9329-db2b5adc43a2)
 
-# misty-public
+# Misty 🌫️
 
-Meet Misty your AI companion for everything TTRPG.
+Meet **Misty**—your AI companion for all things TTRPG! 🎲
 
-## Quickstart
+## Quickstart 🚀
 
 ### Colab
 
-[>> Start for Free](https://colab.research.google.com/drive/1GxO1RO-WKDh3MV9KcupjJ1FoOLlESL9z?usp=sharing)
+[![Start for Free](https://img.shields.io/badge/Start%20for%20Free%20on-Colab-brightgreen?style=for-the-badge&logo=google-colab)](https://colab.research.google.com/drive/1GxO1RO-WKDh3MV9KcupjJ1FoOLlESL9z?usp=sharing)
 
-### Local
+### Local Installation
 
-1. Download [Ollama](https://ollama.com/)
-2. From terminal run `ollama run mltheuser/misty-slim`
-3. Start chatting!
+1. Download [Ollama](https://ollama.com/).
+2. Run the following command in your terminal:
+   ```bash
+   ollama run mltheuser/misty-slim
+   ```
+3. Start chatting with Misty!
 
-## Model Cards
+## Model Cards 🧠
 
 ### Misty-Slim
 
-Fine-tune of LLama 3.1. 
+| **Model**      | **Details**                                                                 |
+|----------------|------------------------------------------------------------------------------|
+| **Name**       | Misty-Slim                                                                   |
+| **Base Model** | [Meta-Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct) |
+| **Size**       | 8 billion parameters                                                        |
+| **Context**    | 8k tokens                                                                    |
+| **Training**   | Fine-tuned on 8 million tokens of high-quality chat data                     |
 
-On 8 Million Tokens of high quality chat data.
+### Performance Comparison 📊
 
-Size: 8b
+![Performance Comparison](https://via.placeholder.com/600x300?text=Performance+Comparison+Coming+Soon)
 
-Model Performance:
+## Training Process 🛠️
 
-[Figure]
+Here's a brief overview of how Misty was trained:
 
+1. **Data Collection**: We gather raw data from freely accessible sources such as blogs, wikis, homebrew content, and game transcripts.
+2. **Data Transformation**: The raw data is trasnformed and aligned using a state-of-the-art LLM, following a method similar to [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html).
+3. **Continued Pretraining**: We perform [continued pretraining](https://docs.unsloth.ai/basics/continued-pretraining) on a smaller open-source model.
+4. **Model Iterations**: The collected training data is removed, and new up-to-date data is collected for the next model iteration.
