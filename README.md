@@ -8,7 +8,9 @@ Meet **Misty** — your AI companion for all things TTRPG! 🎲
 
 ### Colab
 
-[![Start for Free](https://img.shields.io/badge/Start%20for%20Free%20on-Colab-brightgreen?style=for-the-badge&logo=google-colab)](https://colab.research.google.com/drive/1GxO1RO-WKDh3MV9KcupjJ1FoOLlESL9z?usp=sharing)
+<a href="https://colab.research.google.com/drive/1GxO1RO-WKDh3MV9KcupjJ1FoOLlESL9z?usp=sharing" target="_blank">
+  <img src="https://img.shields.io/badge/Start%20for%20Free%20on-Colab-brightgreen?style=for-the-badge&logo=google-colab" />
+</a>
 
 ### Local Installation
 
