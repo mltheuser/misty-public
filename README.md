@@ -1,8 +1,8 @@
-![](https://github.com/user-attachments/assets/2b53da99-6c04-4991-9329-db2b5adc43a2)
+# Misty✨
 
-# Misty 🌫️
+Meet **Misty** — your AI companion for all things TTRPG! 🎲
 
-Meet **Misty**—your AI companion for all things TTRPG! 🎲
+[What it can do - Demo - Overview]
 
 ## Quickstart 🚀
 
@@ -23,15 +23,21 @@ Meet **Misty**—your AI companion for all things TTRPG! 🎲
 
 ### Misty-Slim
 
-| **Model**      | **Details**                                                                 |
+```bash
+ollama run mltheuser/misty-slim
+```
+
+|     |                                                             |
 |----------------|------------------------------------------------------------------------------|
 | **Name**       | Misty-Slim                                                                   |
+| **Version**    | `v1.0` <br> *Released: 08.09.2024*                                           |
 | **Base Model** | [Meta-Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct) |
 | **Size**       | 8 billion parameters                                                        |
 | **Context**    | 8k tokens                                                                    |
+| **Max Output**    | 2k tokens                                                                    |
 | **Training**   | Fine-tuned on 8 million tokens of high-quality chat data                     |
 
-### Performance Comparison 📊
+##### Performance Comparison 📊
 
 ![Performance Comparison](https://via.placeholder.com/600x300?text=Performance+Comparison+Coming+Soon)
 
