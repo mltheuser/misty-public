@@ -46,11 +46,7 @@ ollama run mltheuser/llama-misty-slim
 
 ##### Performance Comparison 📊
 
-╭───────────────────────────────────────────────────╮<br>
-│System    Area            misty    gemini-1.5-flash│<br>
-│DnD 5e    knowledge           4                   1│<br>
-│DnD 5e    intelligence        1                   0│<br>
-╰───────────────────────────────────────────────────╯<br>
+<img width="492" alt="Screenshot 2024-09-09 at 14 00 11" src="https://github.com/user-attachments/assets/50b40523-f641-4ac4-974f-5df813d20e58">
 
 ## Training Process 🛠️
 
