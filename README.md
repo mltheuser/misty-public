@@ -46,7 +46,7 @@ ollama run mltheuser/llama-misty-slim
 
 ##### Performance Comparison 📊
 
-<img width="492" alt="Screenshot 2024-09-09 at 14 00 11" src="https://github.com/user-attachments/assets/50b40523-f641-4ac4-974f-5df813d20e58">
+<img width="606" alt="Screenshot 2024-09-09 at 20 00 14" src="https://github.com/user-attachments/assets/427223c3-88f7-410c-bf66-fbf53d132f1b">
 
 ## Training Process 🛠️
 
