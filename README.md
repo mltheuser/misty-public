@@ -2,7 +2,7 @@
 
 Meet **Misty** — your AI companion for all things TTRPG! 🎲
 
-[What it can do - Demo - Overview]
+![](https://github.com/open-webui/open-webui/blob/main/demo.gif)
 
 ## Quickstart 🚀
 
