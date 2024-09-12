@@ -2,7 +2,7 @@
 
 Meet **Misty** — your AI companion for all things TTRPG! 🎲
 
-![](https://github.com/open-webui/open-webui/blob/main/demo.gif)
+<img width="607" alt="Screenshot 2024-09-12 at 17 04 42" src="https://github.com/user-attachments/assets/87785f63-a07e-46f2-92b3-864939879ace">
 
 ## Quickstart 🚀
 
@@ -46,7 +46,7 @@ ollama run mltheuser/llama-misty-slim
 
 ##### Performance Comparison 📊
 
-<img width="606" alt="Screenshot 2024-09-09 at 20 00 14" src="https://github.com/user-attachments/assets/427223c3-88f7-410c-bf66-fbf53d132f1b">
+<img width="607" alt="Screenshot 2024-09-12 at 17 04 42" src="https://github.com/user-attachments/assets/b8da0c11-a190-44e7-a6e2-8284ca4ee605">
 
 ## Training Process 🛠️
 
