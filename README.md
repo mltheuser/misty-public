@@ -51,7 +51,7 @@ Here's a quick comparison showing how `Misty-Slim v2.0` stacks up against it's b
 
 ### 🧠 How Misty is Built: The Training Pipeline
 
-Misty's expertise comes from a sophisticated, multi-stage pipeline designed to build, refine, and continuously improve its TTRPG knowledge. This process is a "virtuous cycle" where data is systematically enhanced before training, and user interactions fuel future improvements.
+Misty's expertise comes from a sophisticated, multi-stage pipeline designed to build, refine, and continuously improve its TTRPG knowledge.
 
 This diagram illustrates the end-to-end workflow, from raw data to a deployed, self-improving AI.
 
