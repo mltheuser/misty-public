@@ -2,11 +2,11 @@
 
 **Your AI companion for all things Tabletop RPG.**
 
-Misty is a specialized AI designed with a deep, accurate knowledge of TTRPG domains like Dungeons & Dragons 5e, Pathfinder, and more. Built with a custom RAG (Retrieval-Augmented Generation) pipeline, Misty provides detailed and context-aware answers to your TTRPG questions.
+Misty is a specialized AI designed with a deep, accurate knowledge of TTRPG domains like Dungeons & Dragons 5e, Pathfinder, and more. Trained with data generated from a custom RAG (Retrieval-Augmented Generation) pipeline, Misty provides detailed and context-aware answers to your TTRPG questions.
 
 <p align="center">
   <a href="https://chati-836177676205.us-central1.run.app/" target="_blank" rel="noreferrer noopener">
-    <img src="https://img.shields.io/badge/Try%20the%20Live%20Demo-Web%20App-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0wIDE4Yy00LjQxIDAtOC0zLjU5LTgtOHMzLjU5LTggOC04IDggMy41OSA4IDhzLTMuNTkgOC04IDh6bS0xLTNWOWgydjZIMTF6bTAgNHYtMmgydjJIMTEiLz48L3N2Zz4=" />
+    <img src="https://img.shields.io/badge/Try%20the%20Live%20Demo-Web%20App-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyek0xMCAxNi41di05bDYgNC41LTQgNC41eiIvPjwvc3ZnPg==" />
   </a>
   &nbsp;
   <a href="https://colab.research.google.com/drive/1GxO1RO-WKDh3MV9KcupjJ1FoOLlESL9z?usp=sharing" target="_blank" rel="noreferrer noopener">
@@ -17,6 +17,117 @@ Misty is a specialized AI designed with a deep, accurate knowledge of TTRPG doma
     <img src="https://img.shields.io/badge/Download%20from-Ollama-lightgrey?style=for-the-badge&logo=ollama" />
   </a>
 </p>
+
+---
+
+## 🚀 The Official Misty Experience
+
+The latest and most powerful version of Misty is available exclusively through our live web app. This version is continuously updated with the newest features, data, and model improvements.
+
+<p align="center">
+  <a href="https://chati-836177676205.us-central1.run.app/" target="_blank" rel="noreferrer noopener">
+    <img src="https://img.shields.io/badge/Try%20the%20Live%20Demo-Web%20App-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyek0xMCAxNi41di05bDYgNC41LTQgNC41eiIvPjwvc3ZnPg==" />
+  </a>
+</p>
+
+---
+
+## 📊 Performance
+
+Here's a quick comparison showing how `Misty-Slim v2.0` stacks up against it's base model `Gemma3 12b` and the bigger closed source `Gemini-2.5-flash` on a TTRPG-focused benchmark. We evaluated responses across several key areas, with Misty's specialized training showing a distinct advantage in nuanced, domain-specific tasks.
+
+| **DnD 5e**         | Misty              | Gemini-2.5-flash | Gemma3 12b |
+| :----------------- | :----------------- | :--------------- | :----- |
+| AdventurePrep      | **62.4**           | 31.5             | 6.1    |
+| Character Building | **48.9**           | 42.3             | 8.8    |
+| GMing              | **75.5**           | 21.0             | 3.5    |
+| Intelligence       | **54.1**           | 39.6             | 6.3    |
+| Knowledge          | **71.8**           | 24.9             | 3.3    |
+
+<br>
+<small>*Values represent the win rate (%) per model per category, based on head-to-head comparisons. This study was conducted with 5 participants.*</small>
+
+---
+
+### 🧠 How Misty is Built: The Training Pipeline
+
+Misty's expertise comes from a sophisticated, multi-stage pipeline designed to build, refine, and continuously improve its TTRPG knowledge. This process is a "virtuous cycle" where data is systematically enhanced before training, and user interactions fuel future improvements.
+
+This diagram illustrates the end-to-end workflow, from raw data to a deployed, self-improving AI.
+
+```mermaid
+graph LR
+    subgraph Phase 1: Data Curation & Generation
+        A["🌐<br>TTRPG Sources<br>(Wikis, Forums)"] -->|Scrape| B("📄<br>Raw Docs");
+        
+        subgraph Stream A: Grounded Data
+            B --> C["🤖<br>Teacher AI"];
+            C -->|Generates| D("❓<br>Grounded<br>Chat Data");
+        end
+
+        subgraph Stream B: Self-Play Data
+            B --> E["📚<br>RAG Knowledge Base"];
+            E --> F{"🎲<br>RAG Agent<br>Self-Play"};
+            F -->|Generates| G("🎭<br>TTRPG Game<br>Transcripts");
+        end
+    end
+
+    subgraph Phase 2: Refinement & Two-Stage Training
+        subgraph RAG Refinement
+            D -->|Input Question| H["🧠<br>RAG Agent"];
+            E -->|Retrieves Context| H;
+            H -->|Generates Optimal Answer| I("💡<br>Refined<br>Chat Data");
+        end
+
+        subgraph Training
+            J["Base Model"] -->|Stage 1: Pre-training| K(("Pre-trained<br>Model"));
+            D -->|Overfits on<br>Core Knowledge| K;
+
+            K -->|Stage 2: Fine-tuning| L(("✨<br>Final Misty<br>Model"));
+            I -->|Adds Nuance<br>& Breadth| L;
+            G -->|Adds Conversational<br>Flow| L;
+        end
+    end
+
+    subgraph Phase 3: Deployment & The Flywheel
+        L --> M["💻<br>Web App<br>Interface"];
+        M -->|User Interactions| N("💬<br>New User<br>Chats");
+        N -.->|Feedback Loop for v.Next| H;
+    end
+
+    style L fill:#8A2BE2,stroke:#333,stroke-width:2px,color:#fff
+```
+
+### The Process Explained Step-by-Step
+
+**Phase 1: Data Curation & Generation**
+
+The foundation of Misty is built on two parallel data generation streams:
+
+1.  **Grounded Data Generation:**
+    *   We start by scraping a massive corpus of TTRPG content from reliable online sources.
+    *   A "teacher" LLM processes each scraped document individually to create simple, factual question-and-answer pairs (*Grounded Chat Data*). This ensures the initial data is accurate and directly sourced.
+
+2.  **Self-Play for Realism:**
+    *   In parallel, all scraped documents are loaded into a RAG knowledge base.
+    *   We simulate real gameplay using a "self-play" mechanism where two RAG agents—one acting as a Game Master and the other as a player—interact to generate authentic-sounding *TTRPG Game Transcripts*.
+
+**Phase 2: Refinement & Two-Stage Training**
+
+This is where the raw data is transformed into intelligence:
+
+3.  **RAG-Powered Refinement:**
+    *   The initial *Grounded Chat Data* is improved. We feed the questions to a powerful RAG agent that can access the *entire* knowledge base (not just one document). This allows it to generate far more comprehensive and contextually aware answers, creating a high-quality *Refined Chat Data* set.
+
+4.  **Two-Stage Training:**
+    *   **Stage 1: Continued Pre-training:** The base model is first trained on the simple *Grounded Chat Data*. The goal here is to deeply embed core TTRPG facts and terminology, intentionally allowing the model to "overfit" on this foundational knowledge.
+    *   **Stage 2: Fine-tuning:** The pre-trained model is then fine-tuned on a mix of the nuanced *Refined Chat Data* and the conversational *Game Transcripts*. This final step teaches the model how to apply its knowledge creatively and engage in natural, flowing dialogue.
+
+**Phase 3: Deployment & The Flywheel Effect**
+
+5.  **Deployment and Continuous Improvement:**
+    *   The final Misty model is deployed to a public web interface.
+    *   New conversations from users are collected and fed back into the **RAG Refinement** stage of the pipeline. This creates a powerful feedback loop, or "flywheel," ensuring that Misty continuously learns and improves in the areas that matter most to its users.
 
 ---
 
@@ -52,11 +163,17 @@ Here's a demonstration of Misty's ability to provide specific, actionable inform
 >
 > Both routes will get you from Klarg's Cave to the Goblin Den where Sildar is imprisoned. The first route is longer but involves walking through caves and across a bridge, while the second route is more direct but requires descending a chimney.
 
-## 🚀 Quickstart
+---
 
-Get up and running with Misty in minutes. The easiest way to start is with Google Colab or by running it locally with Ollama.
+## 📦 Archived Version: Misty-Slim (Local & Colab)
 
-### Option 1: Run on Google Colab (Free)
+The information below pertains to `Misty-Slim`, a version based on Llama 3.1. **This model is now deprecated and is no longer being updated.** It remains available for users who wish to experiment with a local version or run it on Google Colab. For the best and most current experience, we strongly recommend using the live web app.
+
+### Quickstart
+
+Get up and running with the archived version of Misty in minutes.
+
+#### Option 1: Run on Google Colab (Free)
 
 Click the button below to launch a free, ready-to-use notebook.
 
@@ -64,7 +181,7 @@ Click the button below to launch a free, ready-to-use notebook.
   <img src="https://img.shields.io/badge/Start%20for%20Free%20on-Colab-brightgreen?style=for-the-badge&logo=google-colab" />
 </a>
 
-### Option 2: Run Locally with Ollama
+#### Option 2: Run Locally with Ollama
 
 If you have [Ollama](https://ollama.com/) installed, you can download and run Misty with a single command.
 
@@ -75,7 +192,7 @@ If you have [Ollama](https://ollama.com/) installed, you can download and run Mi
     ```
 3.  **Start Chatting:** That's it! You can now interact with Misty directly in your terminal.
 
-## 🧠 Model Details: Misty-Slim
+### Model Details: Misty-Slim
 
 This is the freely available, distilled version of Misty. It's built for efficient local use without sacrificing quality on core TTRPG knowledge.
 
@@ -89,17 +206,3 @@ This is the freely available, distilled version of Misty. It's built for efficie
 | **Context Size** | 8,192 tokens                                                                                                                            |
 | **Max Output** | 2,048 tokens                                                                                                                             |
 | **Training Data** | 8 million TTRPG-focused tokens 📚                                                                                                      |
-
-## 📊 Performance
-
-Here's a quick comparison showing how `Misty-Slim` stacks up against other models in its class on a TTRPG-focused benchmark.
-
-<img width="607" alt="Misty-Slim performance comparison chart" src="https://github.com/user-attachments/assets/b8da0c11-a190-44e7-a6e2-8284ca4ee605">
-
-## 🛠️ How Misty Learns
-
-Misty's expertise comes from a carefully designed training process:
-
-1.  **Curating Knowledge:** We gather high-quality data from a wide range of freely accessible TTRPG sources, including blogs, wikis, homebrew content, and actual-play transcripts.
-2.  **Instruction Tuning:** This raw knowledge is transformed into a structured, instruction-following format. We use a powerful LLM to generate high-quality question-and-answer pairs, similar to the method used for [Stanford's Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html).
-3.  **Specialized Pre-training:** Finally, we perform [continued pre-training](https://docs.unsloth.ai/basics/continued-pretraining) on the base model, further refining its understanding and response patterns specifically for the TTRPG domain.
