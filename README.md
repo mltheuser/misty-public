@@ -56,46 +56,30 @@ Misty's expertise comes from a sophisticated, multi-stage pipeline designed to b
 This diagram illustrates the end-to-end workflow, from raw data to a deployed, self-improving AI.
 
 ```mermaid
-graph LR
-    subgraph Phase 1: Data Curation & Generation
-        A["🌐<br>TTRPG Sources<br>(Wikis, Forums)"] -->|Scrape| B("📄<br>Raw Docs");
+graph TD
+    subgraph "1. Data Generation"
+        A["🌐<br>TTRPG Sources"] --> B("❓<br>Factual Q&A")
+        A --> C("🎭<br>Game Transcripts")
+    end
+
+    subgraph "2. Training Pipeline"
+        B --> D("🧠<br>RAG Refinement")
+        D --> E("💡<br>High-Quality<br>Conversations")
         
-        subgraph Stream A: Grounded Data
-            B --> C["🤖<br>Teacher AI"];
-            C -->|Generates| D("❓<br>Grounded<br>Chat Data");
-        end
-
-        subgraph Stream B: Self-Play Data
-            B --> E["📚<br>RAG Knowledge Base"];
-            E --> F{"🎲<br>RAG Agent<br>Self-Play"};
-            F -->|Generates| G("🎭<br>TTRPG Game<br>Transcripts");
-        end
+        F["🤖<br>Base LLM"] --"1. Pre-train Core Facts"--> G(("Core Model"))
+        G --"2. Fine-tune for Nuance"--> H(("✨ Misty"))
+        
+        E --> H
+        C --> H
     end
 
-    subgraph Phase 2: Refinement & Two-Stage Training
-        subgraph RAG Refinement
-            D -->|Input Question| H["🧠<br>RAG Agent"];
-            E -->|Retrieves Context| H;
-            H -->|Generates Optimal Answer| I("💡<br>Refined<br>Chat Data");
-        end
-
-        subgraph Training
-            J["Base Model"] -->|Stage 1: Pre-training| K(("Pre-trained<br>Model"));
-            D -->|Overfits on<br>Core Knowledge| K;
-
-            K -->|Stage 2: Fine-tuning| L(("✨<br>Final Misty<br>Model"));
-            I -->|Adds Nuance<br>& Breadth| L;
-            G -->|Adds Conversational<br>Flow| L;
-        end
+    subgraph "3. The Flywheel"
+        H --> I["💻<br>Live App"]
+        I --> J("💬<br>User Interactions")
+        J -.->|"Improves v.Next"| D
     end
 
-    subgraph Phase 3: Deployment & The Flywheel
-        L --> M["💻<br>Web App<br>Interface"];
-        M -->|User Interactions| N("💬<br>New User<br>Chats");
-        N -.->|Feedback Loop for v.Next| H;
-    end
-
-    style L fill:#8A2BE2,stroke:#333,stroke-width:2px,color:#fff
+    style H fill:#8A2BE2,stroke:#333,stroke-width:2px,color:#fff
 ```
 
 ### The Process Explained Step-by-Step
